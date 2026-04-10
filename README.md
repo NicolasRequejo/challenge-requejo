@@ -88,9 +88,7 @@ npm run start
 ## Mejoras posibles si hubiese más tiempo
 
 - tests unitarios para contexts y helpers
-- cierre del popup al hacer click afuera
 - animaciones sutiles
-- skeleton loaders
 - página dedicada de checkout / carrito completo
 - uso de `next/image` con una estrategia de dominios remotos controlada
 
