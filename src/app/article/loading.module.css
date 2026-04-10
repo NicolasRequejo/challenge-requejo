@@ -1,0 +1,127 @@
+.page {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.breadcrumb,
+.imageSkeleton,
+.categorySkeleton,
+.titleSkeleton,
+.ratingSkeleton,
+.priceSkeleton,
+.textLine,
+.textLineShort,
+.badgeSkeleton,
+.buttonPrimary,
+.buttonSecondary {
+  animation: pulse 1.2s ease-in-out infinite;
+  background: linear-gradient(90deg, #eef3fb 25%, #dde5f1 50%, #eef3fb 75%);
+  background-size: 200% 100%;
+  border-radius: 12px;
+}
+
+.breadcrumb {
+  width: 160px;
+  height: 18px;
+  margin-bottom: 24px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.imageSkeleton {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: 24px;
+}
+
+.content {
+  display: grid;
+  gap: 14px;
+}
+
+.categorySkeleton {
+  width: 110px;
+  height: 28px;
+  border-radius: 999px;
+}
+
+.titleSkeleton {
+  width: 80%;
+  height: 42px;
+}
+
+.ratingSkeleton {
+  width: 120px;
+  height: 18px;
+}
+
+.priceSkeleton {
+  width: 140px;
+  height: 32px;
+}
+
+.textLine {
+  width: 100%;
+  height: 18px;
+}
+
+.textLineShort {
+  width: 72%;
+  height: 18px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.badgeSkeleton {
+  width: 140px;
+  height: 34px;
+  border-radius: 999px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  width: 200px;
+  height: 48px;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 100%;
+  }
+}

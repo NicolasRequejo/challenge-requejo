@@ -1,0 +1,138 @@
+.panel {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: min(420px, calc(100vw - 32px));
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid rgba(215, 222, 234, 0.95);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 28px 70px rgba(19, 34, 56, 0.18);
+  z-index: 20;
+}
+
+.header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ecf0f6;
+}
+
+.title,
+.subtitle,
+.totalLabel,
+.totalAmount,
+.emptyTitle,
+.emptyText {
+  margin: 0;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.closeButton {
+  border: 0;
+  background: transparent;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--muted);
+}
+
+.list {
+  display: grid;
+  gap: 14px;
+  max-height: 360px;
+  overflow-y: auto;
+  padding: 16px 2px;
+}
+
+.footer {
+  display: grid;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #ecf0f6;
+}
+
+.totalLabel {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.totalAmount {
+  margin-top: 4px;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.footerActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 46px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-weight: 700;
+}
+
+.primaryButton {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.secondaryButton {
+  background: white;
+}
+
+.emptyState {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 32px 12px 10px;
+}
+
+.emptyIcon {
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  border-radius: 50%;
+  background: var(--surface-alt);
+}
+
+.emptyTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.emptyText {
+  max-width: 28ch;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 540px) {
+  .panel {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .footerActions {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,211 @@
+.card {
+  display: grid;
+  background: var(--surface);
+  border: 1px solid rgba(215, 222, 234, 0.9);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.mediaWrap {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  background: linear-gradient(180deg, #f4f7fb 0%, #dfe6f1 100%);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favoriteButton {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+  font-size: 1.2rem;
+  box-shadow: 0 12px 24px rgba(19, 34, 56, 0.14);
+  cursor: pointer;
+}
+
+.favoriteActive {
+  background: #ffe7ea;
+  color: #d10f35;
+}
+
+.content {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.category {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--surface-alt);
+  color: var(--primary-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.titleLink {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  text-decoration: none;
+  color: inherit;
+}
+
+.description {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.price {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.rating {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  min-width: 190px;
+  flex-shrink: 0;
+}
+
+.addToCartButton,
+.detailButton {
+  width: 100%;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+
+.addToCartButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  background-color: #132238;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.addToCartButton:hover {
+  opacity: 0.92;
+}
+
+.addToCartButton:active {
+  transform: translateY(1px);
+}
+
+.addToCartButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+.addToCartButtonSuccess {
+  background-color: #1e7a46;
+  color: #ffffff;
+}
+
+.detailButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: #f3f6fb;
+  color: #132238;
+  font-weight: 600;
+}
+
+.buttonDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.buttonDotLoading {
+  animation: pulse 0.8s infinite ease-in-out;
+}
+
+.buttonDotSuccess {
+  background-color: #ffffff;
+  transform: scale(1.15);
+}
+
+.cartFeedback {
+  min-height: 22px;
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.cartFeedbackSuccess {
+  color: #1e7a46;
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    min-width: 100%;
+  }
+}

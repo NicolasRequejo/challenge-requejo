@@ -1,0 +1,41 @@
+.root {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 48px 24px 64px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid rgba(215, 222, 234, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.illustration {
+  width: 96px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background: var(--surface-alt);
+}
+
+.queryChip {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #eef3fb;
+  font-weight: 700;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.description {
+  margin: 0;
+  max-width: 52ch;
+  color: var(--muted);
+  line-height: 1.6;
+}

@@ -1,0 +1,68 @@
+.row {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 12px;
+}
+
+.image {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: #eef3fb;
+}
+
+.content {
+  display: grid;
+  gap: 10px;
+}
+
+.info {
+  display: grid;
+  gap: 4px;
+}
+
+.title,
+.price {
+  margin: 0;
+}
+
+.title {
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.price {
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.quantityControls {
+  display: inline-grid;
+  grid-template-columns: 34px 34px 34px;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.quantityControls button {
+  width: 100%;
+  height: 34px;
+  border: 0;
+  background: white;
+}
+
+.removeButton {
+  border: 0;
+  background: transparent;
+  color: var(--danger);
+  font-weight: 700;
+}
